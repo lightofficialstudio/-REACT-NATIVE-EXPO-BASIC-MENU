@@ -1,0 +1,65 @@
+my-expo-app/
+├── .expo/
+├── .git/
+├── assets/
+│   ├── images/
+│   └── icons/
+├── node_modules/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── navigation/
+│   ├── screens/
+│   ├── services/
+│   ├── store/
+│   ├── utils/
+│   └── App.js
+├── .eslintrc.js
+├── .gitignore
+├── app.json
+├── babel.config.js
+├── package.json
+└── tsconfig.json (optional, if using TypeScript)
+
+
+1. node_modules/
+This is the default folder that contains all the dependencies your project needs, including React, Expo, and any libraries you install.
+2. assets/
+This directory stores static resources like images, fonts, and icons that your app will use.
+images/: Contains image files such as logos, background images, etc.
+icons/: Stores icon assets, which might include app icons for different screen resolutions.
+3. src/
+Main source folder where all your application logic and code reside.
+
+components/: Contains reusable UI components (e.g., buttons, headers, card components).
+
+hooks/: Custom React hooks used for handling business logic, state management, or fetching data.
+
+navigation/: Stores the navigation-related files, such as the setup for React Navigation (i.e., stack navigators, tab navigators, etc.).
+
+screens/: Contains all the screen components that represent different views or pages in your app (e.g., HomeScreen, ProfileScreen, etc.).
+
+services/: This directory holds business logic, such as API calls, authentication services, and data management.
+
+store/: If you're using state management (such as Redux, Zustand, or Context API), this is where your store-related code will be.
+
+utils/: Utility functions or helper files that are used across the app (e.g., date formatting, validation functions, etc.).
+
+App.js: The entry point of your Expo app. It generally contains the root component and configuration for the app, such as setting up navigation, context providers, or the global layout.
+
+4. Configuration and Meta Files
+.expo/: Expo-specific configuration and cache files. You usually don’t modify this folder manually.
+
+.git/: Git configuration files and repository data.
+
+.gitignore: Specifies which files and directories Git should ignore when committing to the version control system (e.g., node_modules/, .expo/, etc.).
+
+app.json: The main Expo configuration file. It contains settings like the app name, icon, splash screen, platform configurations, etc.
+
+babel.config.js: The Babel configuration file used to transpile JavaScript code for React Native and Expo.
+
+package.json: This file lists the project’s dependencies (e.g., react, react-native, expo, etc.) and scripts (e.g., start, build, test).
+
+.eslintrc.js: ESLint configuration file to enforce code style and ensure quality across the project.
+
+tsconfig.json (optional): If using TypeScript, this file configures the TypeScript compiler options.

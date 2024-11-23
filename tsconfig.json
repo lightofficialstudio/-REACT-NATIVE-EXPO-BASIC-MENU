@@ -5,7 +5,11 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@components/*": [
+        "./src/components/*"
       ]
+     
     }
   },
   "include": [

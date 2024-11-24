@@ -1,11 +1,11 @@
 import { StyleSheet, Image, Platform } from 'react-native';
 
-import { Collapsible } from '@components/Collapsible';
-import { ExternalLink } from '@components/ExternalLink';
-import ParallaxScrollView from '@components/ParallaxScrollView';
-import { ThemedText } from '@components/ThemedText';
-import { ThemedView } from '@components/ThemedView';
-import { IconSymbol } from '@components/ui/IconSymbol';
+import { Collapsible } from '@/src/components/collapsible';
+import { ExternalLink } from '@/src/components/external-link';
+import ParallaxScrollView from '@/src/components/parallax-scroll-view';
+import { ThemedText } from '@/src/components/themed-text';
+import { ThemedView } from '@/src/components/themed-view';
+import { IconSymbol } from '@/src/components/ui/icon-symbol';
 
 export default function TabTwoScreen() {
   return (
@@ -57,7 +57,7 @@ export default function TabTwoScreen() {
       <Collapsible title="Custom fonts">
         <ThemedText>
           Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
+          <ThemedText style={{ fontFamily: 'LineSeedTH' }}>
             custom fonts such as this one.
           </ThemedText>
         </ThemedText>

@@ -21,14 +21,19 @@ export function ThemedText({
     <Text
       style={[
         { color },
+        {fontFamily:"LineSeedTH"},
+
         type === 'default' ? styles.default : undefined,
         type === 'title' ? styles.title : undefined,
         type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
         type === 'subtitle' ? styles.subtitle : undefined,
         type === 'link' ? styles.link : undefined,
         style,
-      ]}
+      ]
+    }
+      
       {...rest}
+      
     />
   );
 }
@@ -36,7 +41,7 @@ export function ThemedText({
 const styles = StyleSheet.create({
   default: {
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 20,
   },
   defaultSemiBold: {
     fontSize: 16,
@@ -45,8 +50,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    fontWeight: 'bold',
-    lineHeight: 32,
+    fontWeight:"900",
+    fontFamily: "LineSeedTHBold",
+    lineHeight: 0,
   },
   subtitle: {
     fontSize: 20,

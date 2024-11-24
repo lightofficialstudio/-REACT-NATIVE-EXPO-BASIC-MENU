@@ -14,7 +14,8 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    LineSeedTH: require('@/assets/fonts/line-font/LINESeedSansTH_A_Rg.ttf'),
+    LineSeedTHBold: require('@/assets/fonts/line-font/LINESeedSansTH_A_Bd.ttf'),
   });
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function RootLayout() {
       SplashScreen.hideAsync();
     }
   }, [loaded]);
-
+ 
   if (!loaded) {
     return null;
   } 
@@ -30,7 +31,7 @@ export default function RootLayout() {
   
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>

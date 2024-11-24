@@ -1,4 +1,4 @@
-import { FlatList, Image, StyleSheet, View } from "react-native";
+import { FlatList, Image, ScrollView, StyleSheet, View } from "react-native";
 import ParallaxScrollView from "@/src/components/parallax-scroll-view";
 import { ThemedView } from "@/src/components/themed-view";
 import { ThemedText } from "@/src/components/themed-text";
@@ -9,9 +9,11 @@ import AddListButton from "@components/button/add-list-button";
 import { tempData } from "@/src/utils/JSON/todo-list-temp";
 import TodoListButton from "@/src/components/button/todo-list-button";
 import { Link } from "expo-router";
+import { atom, useAtom } from "jotai";
+import { loadingAtom } from "@store/loading-atom";
 
 export default function TodoScreen() {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useAtom(loadingAtom);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,7 +57,8 @@ export default function TodoScreen() {
             <FlatList
               data={tempData}
               keyExtractor={(item) => item.name}
-              horizontal={false}
+              horizontal={false} 
+              nestedScrollEnabled
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => <TodoListButton list={item} />}
             />
